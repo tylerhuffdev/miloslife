@@ -1,21 +1,34 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from 'react'
+import style from './index.module.css'
+import {Link} from 'gatsby'
+import {
+  Paper, Button, Backdrop, Typography, Grid
+} from '@material-ui/core'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
-
-export default IndexPage
+export default () => {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false)
+  }
+  const handleToggle = () => {
+    setOpen(!open)
+  }
+  return (
+  <>
+    <Grid container spacing={2}>
+      <Paper className={style.paper}>
+        <Typography variant='h3'>MilosLife</Typography>
+        <Button onClick={handleToggle}>Menu</Button>
+        <Backdrop open={open} onClick={handleClose} className={style.backdrop}>
+          <Link to='/pics/' className={style.link}>
+            Photo Album
+          </Link>
+        </Backdrop>
+        <Paper>
+          <img style={{height: '50%', width: '50%'}} src='/Milo.png' alt='me'/>
+        </Paper>
+      </Paper>
+    </Grid>
+  </>
+  )
+}

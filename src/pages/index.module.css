@@ -1,0 +1,17 @@
+.paper {
+    color: palevioletred !important;
+    text-align: center;
+    font-size: 34px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    z-index: 1;
+}
+.backdrop {
+    z-index: 2 !important;
+}
+.link {
+    text-decoration: none !important;
+    color: palevioletred !important;
+}

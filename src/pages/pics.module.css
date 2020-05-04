@@ -1,0 +1,22 @@
+img {
+    height: 200px;
+    width: 200px;
+}
+.paper {
+    color: palevioletred !important;
+    text-align: center;
+    font-size: 34px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    z-index: 1;
+}
+.link {
+    text-decoration: none !important;
+    color: palevioletred !important;
+}
+.backdrop {
+    z-index: 2 !important;
+    color: '#fff';
+}
