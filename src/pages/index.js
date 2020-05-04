@@ -25,7 +25,7 @@ export default () => {
           </Link>
         </Backdrop>
         <Paper>
-          <img style={{height: '50%', width: '50%'}} src='/Milo.png' alt='me'/>
+          <img style={{height: '50%', width: '50%'}} src='/Milo.jpg' alt='me'/>
         </Paper>
       </Paper>
     </Grid>
